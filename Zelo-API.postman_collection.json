@@ -1,0 +1,176 @@
+{
+"info": {
+"_postman_id": "12345678-1234-1234-1234-123456789012",
+"name": "Zelo API",
+"description": "Coleção de testes para a API do projeto Zelo (Java Advanced)",
+"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+},
+"item": [
+{
+"name": "Auth",
+"item": [
+{
+"name": "Login",
+"request": {
+"method": "POST",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{\n    \"email\": \"joao@email.com\",\n    \"senha\": \"senha123\"\n}"
+},
+"url": {
+"raw": "http://localhost:8080/api/auth/login",
+"protocol": "http",
+"host": [
+"localhost"
+],
+"port": "8080",
+"path": [
+"api",
+"auth",
+"login"
+]
+}
+}
+}
+]
+},
+{
+"name": "Tutores",
+"item": [
+{
+"name": "Listar Tutores",
+"request": {
+"method": "GET",
+"header": [
+{
+"key": "Authorization",
+"value": "Bearer {{token}}"
+}
+],
+"url": {
+"raw": "http://localhost:8080/api/tutores?page=0&size=10&sort=nome,asc",
+"protocol": "http",
+"host": [
+"localhost"
+],
+"port": "8080",
+"path": [
+"api",
+"tutores"
+],
+"query": [
+{
+"key": "page",
+"value": "0"
+},
+{
+"key": "size",
+"value": "10"
+},
+{
+"key": "sort",
+"value": "nome,asc"
+}
+]
+}
+}
+},
+{
+"name": "Criar Tutor",
+"request": {
+"method": "POST",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{\n    \"nome\": \"Novo Tutor\",\n    \"email\": \"novo@email.com\",\n    \"senha\": \"senha123\",\n    \"telefone\": \"11999999999\"\n}"
+},
+"url": {
+"raw": "http://localhost:8080/api/tutores",
+"protocol": "http",
+"host": [
+"localhost"
+],
+"port": "8080",
+"path": [
+"api",
+"tutores"
+]
+}
+}
+}
+]
+},
+{
+"name": "Pets",
+"item": [
+{
+"name": "Listar Pets",
+"request": {
+"method": "GET",
+"header": [
+{
+"key": "Authorization",
+"value": "Bearer {{token}}"
+}
+],
+"url": {
+"raw": "http://localhost:8080/api/pets",
+"protocol": "http",
+"host": [
+"localhost"
+],
+"port": "8080",
+"path": [
+"api",
+"pets"
+]
+}
+}
+},
+{
+"name": "Criar Pet",
+"request": {
+"method": "POST",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json"
+},
+{
+"key": "Authorization",
+"value": "Bearer {{token}}"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{\n    \"nome\": \"Novo Pet\",\n    \"especie\": \"Cão\",\n    \"raca\": \"Vira-lata\",\n    \"idade\": 2,\n    \"peso\": 15.5,\n    \"tutor\": {\n        \"id\": 1\n    }\n}"
+},
+"url": {
+"raw": "http://localhost:8080/api/pets",
+"protocol": "http",
+"host": [
+"localhost"
+],
+"port": "8080",
+"path": [
+"api",
+"pets"
+]
+}
+}
+}
+]
+}
+]
+}

@@ -1,0 +1,18 @@
+# Link do Repositório GitHub - Projeto Zelo (Java Advanced)
+
+O repositório público com todos os artefatos do projeto está disponível no seguinte link:
+
+https://github.com/RM563192/zelo-java-api
+
+## Instruções de Acesso
+O repositório é público, portanto, os professores têm acesso total ao código-fonte, documentações e histórico de commits.
+
+## Configuração de Credenciais
+Por questões de segurança, as credenciais do banco de dados Oracle não foram "hardcoded" no código-fonte.
+Para executar o projeto localmente, configure as seguintes variáveis de ambiente:
+
+- DB_HOST=oracle.fiap.com.br
+- DB_PORT=1521
+- DB_SID=ORCL
+- DB_USER=rm562380
+- DB_PASS=040207
