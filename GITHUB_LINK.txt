@@ -2,17 +2,34 @@
 
 O repositório público com todos os artefatos do projeto está disponível no seguinte link:
 
-https://github.com/RM563192/zelo-java-api
+🔗 https://github.com/Hebertlps/zelo-java-api
 
 ## Instruções de Acesso
-O repositório é público, portanto, os professores têm acesso total ao código-fonte, documentações e histórico de commits.
+O repositório é PÚBLICO, portanto, os professores têm acesso total ao código-fonte, documentações e histórico de commits.
+
+## Estrutura do Repositório
+- CRONOGRAMA.md / CRONOGRAMA.pdf - Cronograma de desenvolvimento
+- DIAGRAMAS.md / DIAGRAMAS.pdf - DER e Diagramas de Classes
+- TESTES.md / TESTES.pdf - Documentação de testes
+- Zelo-API.postman_collection.json - Coleção Postman
+- README.md - Documentação geral
+- zelo-api/ - Projeto Spring Boot com código-fonte
 
 ## Configuração de Credenciais
 Por questões de segurança, as credenciais do banco de dados Oracle não foram "hardcoded" no código-fonte.
 Para executar o projeto localmente, configure as seguintes variáveis de ambiente:
 
-- DB_HOST=oracle.fiap.com.br
-- DB_PORT=1521
-- DB_SID=ORCL
-- DB_USER=rm562380
-- DB_PASS=040207
+export DB_HOST=oracle.fiap.com.br
+export DB_PORT=1521
+export DB_SID=ORCL
+export DB_USER=rm562380
+export DB_PASS=040207
+export JWT_SECRET=404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970
+
+## Como Clonar e Executar
+git clone https://github.com/Hebertlps/zelo-java-api.git
+cd zelo-java-api/zelo-api
+./gradlew bootRun
+
+A API estará disponível em http://localhost:8080
+Swagger em http://localhost:8080/swagger-ui.html
